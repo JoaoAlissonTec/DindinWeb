@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lista de dindin</title>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <div class="card">
+            <div class="inputs">
+                <div class="label-input" id="product-label">
+                    <label for="product">Sabor</label>
+                    <input type="text" id="product">
+                </div>
+                <div class="label-input" id="quantity-label">
+                    <label for="quantity">Quantidade</label>
+                    <input type="number" id="quantity">
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="send" value="Adicionar" onclick="add()">Adicionar</button>
+                <button id="exclude" value="Excluir" onclick="exclude()">Excluir Todos</button>
+            </div>
+            <div id="cart" class="cart">
+                <ul id="list" class="list"></ul>
+            </div>
+            <div class="total">
+                <h2>Total: </h2>
+                <p>R$ <span id="totalprice">0.00</p>
+                </p>
+                <h2>Quantidade: </h2>
+                <p><span id="totalquantity">0</p>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
