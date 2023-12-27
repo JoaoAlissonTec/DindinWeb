@@ -55,3 +55,31 @@ function exclude_item(index){
     total_price.innerText = total.toFixed(2)
     total_quantity.innerText = quantity_sum
 }
+
+var qrcode = new QRCode(document.querySelector(".content"), {
+    width: 200,
+    height: 200,
+    colorDark : "#4A2040",
+    colorLight : "#F5CCE8",
+    correctLevel : QRCode.CorrectLevel.H
+})
+
+function active_modal(){
+    const modal = document.querySelector(".modal")
+    const actualStyle = modal.style.display
+
+    if(actualStyle == "block"){
+        modal.style.display = "none"
+        qrcode.clear()
+    }else{
+        modal.style.display = "block"
+        qrcode.makeCode("https://picpay.me/joao.alisson72");
+    }
+}
+
+window.onclick = function(event){
+    const modal = document.querySelector(".modal")
+    if(event.target == modal){
+        active_modal()
+    }
+}

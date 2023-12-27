@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/qrcode.js"></script>
     <title>Lista de dindin</title>
 </head>
 
@@ -51,6 +53,14 @@
                 <h2>Quantidade: </h2>
                 <p><span id="totalquantity">0</p>
                 </p>
+                <div class="buttons">
+                    <button id="active_modal" value="Finalizar" onclick="active_modal()">Finalizar</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="content">
+                
             </div>
         </div>
     </div>
